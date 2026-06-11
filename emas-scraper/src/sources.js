@@ -26,7 +26,7 @@ export const SOURCES = [
   {
     key: 'antam',
     brand: 'Antam',
-    url: 'https://www.logammulia.com/id/harga-emas-hari-ini', // VERIFIKASI
+    url: 'https://anekalogam.co.id/id', // VERIFIKASI
     async run() {
       const $ = await getHtml(this.url);
       // CONTOH: tabel dengan kolom [berat, harga dasar/jual, buyback].
@@ -43,7 +43,7 @@ export const SOURCES = [
   {
     key: 'ubs',
     brand: 'UBS',
-    url: 'https://www.galeri24.co.id/', // VERIFIKASI (cari halaman harga UBS)
+    url: 'https://ubslifestyle.com/fine-gold/', // VERIFIKASI (cari halaman harga UBS)
     async run() {
       const $ = await getHtml(this.url);
       const row = findRowOneGram($);
@@ -59,7 +59,7 @@ export const SOURCES = [
   {
     key: 'hartadinata',
     brand: 'Hartadinata',
-    url: 'https://www.hartadinata.com/', // VERIFIKASI URL halaman harga
+    url: 'https://hrtagold.id/id/gold-price', // VERIFIKASI URL halaman harga
     async run() {
       const $ = await getHtml(this.url);
       const row = findRowOneGram($);
@@ -75,7 +75,7 @@ export const SOURCES = [
   {
     key: 'sampoerna',
     brand: 'Sampoerna',
-    url: 'https://warissampoerna.com/', // VERIFIKASI URL halaman harga
+    url: 'https://sampoernagold.com/catalog_product?edisi=classic', // VERIFIKASI URL halaman harga
     async run() {
       const $ = await getHtml(this.url);
       const row = findRowOneGram($);
@@ -91,7 +91,7 @@ export const SOURCES = [
   {
     key: 'pegadaian',
     brand: 'Pegadaian',
-    url: 'https://www.pegadaian.co.id/harga', // VERIFIKASI URL halaman harga
+    url: 'https://galeri24.co.id/harga-emas#GALERI%2024', // VERIFIKASI URL halaman harga
     async run() {
       const $ = await getHtml(this.url);
       // Pegadaian sering menampilkan harga Tabungan Emas (jual & buyback).
@@ -115,7 +115,7 @@ export const SOURCES = [
   {
     key: 'lotus',
     brand: 'Lotus Archi',
-    url: 'https://www.lotusarchigold.com/', // VERIFIKASI URL halaman harga
+    url: 'https://lotusarchi.com/pricing/', // VERIFIKASI URL halaman harga
     async run() {
       const $ = await getHtml(this.url);
       const row = findRowOneGram($);
