@@ -1,0 +1,14 @@
+services:
+  emas-scraper:
+    build: .
+    image: emas-scraper:latest
+    container_name: emas-scraper
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Jakarta
+      - GOOGLE_CREDENTIALS=/app/credentials/service-account.json
+    volumes:
+      # File kunci service account (read-only)
+      - ./credentials:/app/credentials:ro
