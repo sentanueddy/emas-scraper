@@ -19,7 +19,8 @@ for (const src of SOURCES) {
   try {
     const res = await http.get(src.url);
     const html = String(res.data);
-    const file = `debug-${src.key}.html`;
+    //const file = `debug-${src.key}.html`;
+    const file = `${OUT_DIR}/debug-${src.key}.html`;
     fs.writeFileSync(file, html);
     const jsHint = /__NEXT_DATA__|window\.__|id="root"|ng-app/.test(html)
       ? '  (kemungkinan render via JS — lihat README)'
