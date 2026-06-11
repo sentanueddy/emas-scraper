@@ -12,3 +12,4 @@ services:
     volumes:
       # File kunci service account (read-only)
       - ./credentials:/app/credentials:ro
+      - ./debug:/app/debug
