@@ -11,6 +11,8 @@ import { http } from './util.js';
 import { SOURCES } from './sources.js';
 
 const only = process.argv[2];
+const OUT_DIR = 'debug';
+fs.mkdirSync(OUT_DIR, { recursive: true });
 
 for (const src of SOURCES) {
   if (only && src.key !== only) continue;
